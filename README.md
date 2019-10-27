@@ -4,7 +4,7 @@ Golang的TiDB客户端，基于[go-sql-driver/mysql](https://github.com/go-sql-d
 * 多TiDB连接，自动切换故障TiDB
 * TiDB负载均衡
 
-# Usage
+## Usage
 
 ```go
 import "github.com/sicojuy/ticli"
