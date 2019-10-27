@@ -17,5 +17,11 @@ opt := &Option{
     Timeout:   3,
 }
 cli := NewClient(opt)
+defer cli.Close()
+
 db, err := cli.Open()
+if err != nil {
+    // open db error
+}
+db.Ping()
 ```
