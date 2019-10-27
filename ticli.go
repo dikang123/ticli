@@ -83,7 +83,7 @@ func (c *Client) startChecker() {
 			for i := 0; i < notReadyCount; i++ {
 				if c.isServerReady(c.notReady[i]) {
 					c.lock.Lock()
-					c.ready = append(c.ready, c.ready[i])
+					c.ready = append(c.ready, c.notReady[i])
 					c.notReady = append(c.notReady[0:i], c.notReady[i+1:]...)
 					notReadyCount -= 1
 					c.lock.Unlock()
